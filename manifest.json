@@ -1,0 +1,55 @@
+{
+	"name": "Scovie",
+	"id": "scovie_ynh",
+	"packaging_format": 1,
+	"description": {
+		"en": "Scovie is an open-source digital signage system for high schools."
+	},
+	"version": "0.0.1",
+	"url": "https://github.com/eldertek/scovie_ynh",
+    "upstream": {
+        "license": "MIT",
+        "website": "https://github.com/eldertek/scovie",
+        "code": "https://github.com/YunoHost-Apps/scovie_ynh"
+    },
+	"license": "GPL-3.0",
+	"maintainer": {
+		"name": "André Théo LAURET",
+		"email": "andrelauret@eclipse-technology.eu"
+	},
+	"previous_maintainers": [],
+	"requirements": {
+		"yunohost": ">=11"
+	},
+	"multi_instance": true,
+	"services": [
+		"nginx", "postgresql", "redis"
+	],
+	"arguments": {
+		"install" : [
+			{
+				"name": "domain",
+				"type": "domain"
+			},
+			{
+				"name": "path",
+				"type": "path",
+				"example": "/scovie",
+				"default": "/scovie"
+			},
+			{
+				"name": "admin",
+				"type": "user"
+			},
+			{
+				"name": "is_public",
+				"type": "boolean",
+				"help": {
+					"en": "Any YunoHost user and anonymous people from the web will be able to access the application",
+					"fr": "Tout utilisateur YunoHost et les personnes anonymes pourront accéder à l'application"
+				},
+				"default": true
+			}
+		]
+	}
+}
