@@ -29,7 +29,7 @@ def test_version():
 
     assert_project_version(
         current_version=upstream_version,
-        github_project_url='https://github.com/YunoHost-Apps/django_yunohost_integration',
+        github_project_url='https://github.com/eldertek/django_yunohost_integration',
     )
 
     pyproject_toml_path = Path(PACKAGE_ROOT, 'pyproject.toml')

@@ -4,9 +4,9 @@
 
     Look at real examples, here:
 
-     * https://github.com/YunoHost-Apps/django-fritzconnection_ynh/blob/master/conf/urls.py
-     * https://github.com/YunoHost-Apps/django-for-runners_ynh/blob/testing/conf/urls.py
-     * https://github.com/YunoHost-Apps/pyinventory_ynh/blob/testing/conf/urls.py
+     * https://github.com/eldertek/django-fritzconnection_ynh/blob/master/conf/urls.py
+     * https://github.com/eldertek/django-for-runners_ynh/blob/testing/conf/urls.py
+     * https://github.com/eldertek/pyinventory_ynh/blob/testing/conf/urls.py
 
 """
 

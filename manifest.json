@@ -10,7 +10,7 @@
     "upstream": {
         "license": "MIT",
         "website": "https://github.com/eldertek/scovie",
-        "code": "https://github.com/YunoHost-Apps/scovie_ynh"
+        "code": "https://github.com/eldertek/scovie_ynh"
     },
 	"license": "GPL-3.0",
 	"maintainer": {

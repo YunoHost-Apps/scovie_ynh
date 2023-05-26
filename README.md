@@ -15,9 +15,9 @@ If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/in
 
 ## Overview
 
-[![pytest](https://github.com/YunoHost-Apps/scovie_ynh/actions/workflows/pytest.yml/badge.svg)](https://github.com/YunoHost-Apps/scovie_ynh/actions/workflows/pytest.yml) [![YunoHost apps package linter](https://github.com/YunoHost-Apps/scovie_ynh/actions/workflows/package_linter.yml/badge.svg)](https://github.com/YunoHost-Apps/scovie_ynh/actions/workflows/package_linter.yml)
+[![pytest](https://github.com/eldertek/scovie_ynh/actions/workflows/pytest.yml/badge.svg)](https://github.com/eldertek/scovie_ynh/actions/workflows/pytest.yml) [![YunoHost apps package linter](https://github.com/eldertek/scovie_ynh/actions/workflows/package_linter.yml/badge.svg)](https://github.com/eldertek/scovie_ynh/actions/workflows/package_linter.yml)
 
-Demo [YunoHost Application](https://install-app.yunohost.org/?app=scovie_ynh) to demonstrate the integration of a [Python](https://www.python.org/)/[Django](https://www.djangoproject.com/) project under YunoHost using [django_yunohost_integration](https://github.com/YunoHost-Apps/django_yunohost_integration).
+Demo [YunoHost Application](https://install-app.yunohost.org/?app=scovie_ynh) to demonstrate the integration of a [Python](https://www.python.org/)/[Django](https://www.djangoproject.com/) project under YunoHost using [django_yunohost_integration](https://github.com/eldertek/django_yunohost_integration).
 
 To demonstrate the functionality the small [django-example](https://github.com/jedie/django-example) app will be installed.
 
@@ -39,7 +39,7 @@ and urls made for YunoHost installation.
 
 e.g.:
 ```bash
-~$ git clone https://github.com/YunoHost-Apps/scovie_ynh.git
+~$ git clone https://github.com/eldertek/scovie_ynh.git
 ~$ cd scovie_ynh/
 ~/scovie_ynh$ make
 install-poetry         install or update poetry
@@ -68,41 +68,41 @@ Notes:
 
 ## history
 
-* [compare v0.1.5...master](https://github.com/YunoHost-Apps/scovie_ynh/compare/v0.2.0...master) **dev**
+* [compare v0.1.5...master](https://github.com/eldertek/scovie_ynh/compare/v0.2.0...master) **dev**
   * tbc
-* [v0.2.0 - 15.09.2021](https://github.com/YunoHost-Apps/scovie_ynh/compare/v0.1.5...v0.2.0)
+* [v0.2.0 - 15.09.2021](https://github.com/eldertek/scovie_ynh/compare/v0.1.5...v0.2.0)
   * rename/split `scovie_ynh` into:
     * [django_yunohost_integration](https://github.com/jedie/django_yunohost_integration) - Python package with the glue code to integrate a Django project with YunoHost
-    * [scovie_ynh](https://github.com/YunoHost-Apps/scovie_ynh) - Demo YunoHost App to demonstrate the integration of a Django project under YunoHost
-* [v0.1.5 - 19.01.2021](https://github.com/YunoHost-Apps/scovie_ynh/compare/v0.1.4...v0.1.5)
+    * [scovie_ynh](https://github.com/eldertek/scovie_ynh) - Demo YunoHost App to demonstrate the integration of a Django project under YunoHost
+* [v0.1.5 - 19.01.2021](https://github.com/eldertek/scovie_ynh/compare/v0.1.4...v0.1.5)
   * Make some deps `gunicorn`, `psycopg2-binary`, `django-redis`, `django-axes` optional
-* [v0.1.4 - 08.01.2021](https://github.com/YunoHost-Apps/scovie_ynh/compare/v0.1.3...v0.1.4)
-  * Bugfix [CSRF verification failed on POST requests #7](https://github.com/YunoHost-Apps/scovie_ynh/issues/7)
-* [v0.1.3 - 08.01.2021](https://github.com/YunoHost-Apps/scovie_ynh/compare/v0.1.2...v0.1.3)
+* [v0.1.4 - 08.01.2021](https://github.com/eldertek/scovie_ynh/compare/v0.1.3...v0.1.4)
+  * Bugfix [CSRF verification failed on POST requests #7](https://github.com/eldertek/scovie_ynh/issues/7)
+* [v0.1.3 - 08.01.2021](https://github.com/eldertek/scovie_ynh/compare/v0.1.2...v0.1.3)
   * set "DEBUG = True" in local_test (so static files are served and auth works)
   * Bugfixes and cleanups
-* [v0.1.2 - 29.12.2020](https://github.com/YunoHost-Apps/scovie_ynh/compare/v0.1.1...v0.1.2)
+* [v0.1.2 - 29.12.2020](https://github.com/eldertek/scovie_ynh/compare/v0.1.1...v0.1.2)
   * Bugfixes
-* [v0.1.1 - 29.12.2020](https://github.com/YunoHost-Apps/scovie_ynh/compare/v0.1.0...v0.1.1)
+* [v0.1.1 - 29.12.2020](https://github.com/eldertek/scovie_ynh/compare/v0.1.0...v0.1.1)
   * Refactor "create_superuser" to a manage command, useable via "scovie_ynh" in `INSTALLED_APPS`
   * Generate "conf/requirements.txt" and use this file for install
   * rename own settings and urls (in `/conf/`)
-* [v0.1.0 - 28.12.2020](https://github.com/YunoHost-Apps/scovie_ynh/compare/f578f14...v0.1.0)
+* [v0.1.0 - 28.12.2020](https://github.com/eldertek/scovie_ynh/compare/f578f14...v0.1.0)
   * first working state
-* [23.12.2020](https://github.com/YunoHost-Apps/scovie_ynh/commit/f578f144a3a6d11d7044597c37d550d29c247773)
+* [23.12.2020](https://github.com/eldertek/scovie_ynh/commit/f578f144a3a6d11d7044597c37d550d29c247773)
   * init the project
 
 
 ## Links
 
-* Report a bug about this package: https://github.com/YunoHost-Apps/scovie_ynh
+* Report a bug about this package: https://github.com/eldertek/scovie_ynh
 * YunoHost website: https://yunohost.org/
 * PyPi package: https://pypi.org/project/django-ynh/
 
 These projects used `scovie_ynh`:
 
-* https://github.com/YunoHost-Apps/scovie_ynh
-* https://github.com/YunoHost-Apps/django-for-runners_ynh
+* https://github.com/eldertek/scovie_ynh
+* https://github.com/eldertek/django-for-runners_ynh
 
 ---
 
@@ -115,7 +115,7 @@ The App project will be stored under `__FINALPATH__` (e.g.: `/opt/yunohost/$app`
 
 This app is not in YunoHost app catalog. Test install, e.g.:
 ```bash
-~# git clone https://github.com/YunoHost-Apps/scovie_ynh.git
+~# git clone https://github.com/eldertek/scovie_ynh.git
 ~# yunohost app install scovie_ynh/ -f
 ```
 To update:
@@ -186,23 +186,23 @@ root@yunohost:~# journalctl --unit=scovie_ynh --follow
 
 ## Documentation and resources
 
-* Official app website: <https://github.com/YunoHost-Apps/scovie_ynh>
-* Official user documentation: <https://github.com/YunoHost-Apps/scovie_ynh>
-* Official admin documentation: <https://github.com/YunoHost-Apps/scovie_ynh>
-* Upstream app code repository: <https://github.com/YunoHost-Apps/scovie_ynh>
+* Official app website: <https://github.com/eldertek/scovie_ynh>
+* Official user documentation: <https://github.com/eldertek/scovie_ynh>
+* Official admin documentation: <https://github.com/eldertek/scovie_ynh>
+* Upstream app code repository: <https://github.com/eldertek/scovie_ynh>
 * YunoHost documentation for this app: <https://yunohost.org/app_scovie_ynh>
-* Report a bug: <https://github.com/YunoHost-Apps/scovie_ynh_ynh/issues>
+* Report a bug: <https://github.com/eldertek/scovie_ynh_ynh/issues>
 
 ## Developer info
 
-Please send your pull request to the [testing branch](https://github.com/YunoHost-Apps/scovie_ynh_ynh/tree/testing).
+Please send your pull request to the [testing branch](https://github.com/eldertek/scovie_ynh_ynh/tree/testing).
 
 To try the testing branch, please proceed like that.
 
 ``` bash
-sudo yunohost app install https://github.com/YunoHost-Apps/scovie_ynh_ynh/tree/testing --debug
+sudo yunohost app install https://github.com/eldertek/scovie_ynh_ynh/tree/testing --debug
 or
-sudo yunohost app upgrade scovie_ynh -u https://github.com/YunoHost-Apps/scovie_ynh_ynh/tree/testing --debug
+sudo yunohost app upgrade scovie_ynh -u https://github.com/eldertek/scovie_ynh_ynh/tree/testing --debug
 ```
 
 **More info regarding app packaging:** <https://yunohost.org/packaging_apps>

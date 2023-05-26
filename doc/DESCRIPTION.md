@@ -1,6 +1,6 @@
-[![pytest](https://github.com/YunoHost-Apps/scovie_ynh/actions/workflows/pytest.yml/badge.svg)](https://github.com/YunoHost-Apps/scovie_ynh/actions/workflows/pytest.yml) [![YunoHost apps package linter](https://github.com/YunoHost-Apps/scovie_ynh/actions/workflows/package_linter.yml/badge.svg)](https://github.com/YunoHost-Apps/scovie_ynh/actions/workflows/package_linter.yml)
+[![pytest](https://github.com/eldertek/scovie_ynh/actions/workflows/pytest.yml/badge.svg)](https://github.com/eldertek/scovie_ynh/actions/workflows/pytest.yml) [![YunoHost apps package linter](https://github.com/eldertek/scovie_ynh/actions/workflows/package_linter.yml/badge.svg)](https://github.com/eldertek/scovie_ynh/actions/workflows/package_linter.yml)
 
-Demo [YunoHost Application](https://install-app.yunohost.org/?app=scovie_ynh) to demonstrate the integration of a [Python](https://www.python.org/)/[Django](https://www.djangoproject.com/) project under YunoHost using [django_yunohost_integration](https://github.com/YunoHost-Apps/django_yunohost_integration).
+Demo [YunoHost Application](https://install-app.yunohost.org/?app=scovie_ynh) to demonstrate the integration of a [Python](https://www.python.org/)/[Django](https://www.djangoproject.com/) project under YunoHost using [django_yunohost_integration](https://github.com/eldertek/django_yunohost_integration).
 
 To demonstrate the functionality the small [django-example](https://github.com/jedie/django-example) app will be installed.
 
