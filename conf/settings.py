@@ -11,11 +11,14 @@
 
 from pathlib import Path as __Path
 
+from django.contrib.admin.sites import AdminSite
+from django.utils.translation import gettext_lazy as _
+
 from django_yunohost_integration.base_settings import *  # noqa:F401,F403
 from django_yunohost_integration.secret_key import get_or_create_secret as __get_or_create_secret
 
 
-from django_example.settings.prod import *  # noqa:F401,F403 isort:skip
+from scovie.settings.prod import *  # noqa:F401,F403 isort:skip
 
 
 from django_yunohost_integration.base_settings import LOGGING  # noqa:F401 isort:skip
@@ -159,13 +162,32 @@ MEDIA_ROOT = str(PUBLIC_PATH / 'media')
 LOGGING['handlers']['log_file']['filename'] = str(LOG_FILE)
 
 # Example how to add logging to own app:
-LOGGING['loggers']['django_example'] = {
+LOGGING['loggers']['scovie'] = {
     'handlers': ['syslog', 'log_file', 'mail_admins'],
     'level': 'INFO',
     'propagate': False,
 }
 
 # -----------------------------------------------------------------------------
+# Internationalization
+AdminSite.site_title = _("Scovie")
+AdminSite.site_header = _("Scovie - Information management software")
+AdminSite.index_title = _("Administration of Scovie")
+
+LANGUAGES = [
+    ('en', 'English'),
+    ('fr', 'Français'),
+]
+
+LANGUAGE_CODE = "en"
+
+LOCALE_PATHS = [BASE_PATH / 'locale']
+
+TIME_ZONE = "UTC"
+
+USE_I18N = True
+
+USE_TZ = True
 
 try:
     from local_settings import *  # noqa:F401,F403

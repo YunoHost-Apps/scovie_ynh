@@ -21,9 +21,9 @@ if settings.PATH_URL:
     # Prefix all urls with "PATH_URL":
     urlpatterns = [
         path('', RedirectView.as_view(url=f'{settings.PATH_URL}/')),
-        path(f'{settings.PATH_URL}/', include('django_example.urls')),
+        path(f'{settings.PATH_URL}/', include('scovie.urls')),
     ]
 else:
     # Installed to domain root, without a path prefix
     # Just use the default project urls.py
-    from django_example.urls import urlpatterns  # noqa
+    from scovie.urls import urlpatterns  # noqa

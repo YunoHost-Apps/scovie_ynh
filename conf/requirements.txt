@@ -7,12 +7,6 @@ async-timeout==4.0.2 ; python_version >= "3.9" and python_full_version < "4.0.0"
 bleach==5.0.1 ; python_version >= "3.9" and python_full_version < "4.0.0" \
     --hash=sha256:085f7f33c15bd408dd9b17a4ad77c577db66d76203e5984b1bd59baeee948b2a \
     --hash=sha256:0d03255c47eb9bd2f26aa9bb7f2107732e7e8fe195ca2f64709fcf3b0a4a085c
-bx-django-utils==36 ; python_version >= "3.9" and python_full_version < "4.0.0" \
-    --hash=sha256:98f900da91e3cdb22d2f386863fe05e58cfc18ff2d7c0ee656e7d551a135f529 \
-    --hash=sha256:badb8d7fb04ce449cac7896ee435e69d2786eebc3e8c756e99e9379be816cd5f
-bx-py-utils==69 ; python_version >= "3.9" and python_full_version < "4.0.0" \
-    --hash=sha256:728fd575c4d5048e114b502a97d19679f9abcda90889a6896534c48348320460 \
-    --hash=sha256:b25419e020c9c5ea16938a45cf5120086a5ac29648be78a8eb98ae202515fee1
 colorama==0.4.5 ; python_version >= "3.9" and python_full_version < "4.0.0" and sys_platform == "win32" \
     --hash=sha256:854bf444933e37f5824ae7bfc1e98d5bce2ebe4160d46b5edf346a89358e99da \
     --hash=sha256:e6c6b4334fc50988a639d9b98aa429a0b57da6e17b9a44f0451f930b6967b7a4
