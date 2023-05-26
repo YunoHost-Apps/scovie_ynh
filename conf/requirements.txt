@@ -25,9 +25,6 @@ deprecated==1.2.13 ; python_version >= "3.9" and python_full_version < "4.0.0" \
 django-axes==5.39.0 ; python_version >= "3.9" and python_full_version < "4.0.0" \
     --hash=sha256:8f039f8e98f050f13f654efca599d8a04d0b57d330c590cf89ec2bf731c9a7fb \
     --hash=sha256:97702552f7939c81db5bba2ef855ae43f20df92fa261cb79fd4c8633ba3b3955
-django-example==0.1.0rc0 ; python_version >= "3.9" and python_full_version < "4.0.0" \
-    --hash=sha256:9bf31725f539d6c3489fd29a743f496fce1080164f5a62b87a6af2be04ca81c0 \
-    --hash=sha256:de4460c2175506dcb528ac4f98df8c436c2d102f8d08c77b766cf406038eef53
 django-ipware==4.0.2 ; python_version >= "3.9" and python_full_version < "4.0.0" \
     --hash=sha256:602a58325a4808bd19197fef2676a0b2da2df40d0ecf21be414b2ff48c72ad05 \
     --hash=sha256:878dbb06a87e25550798e9ef3204ed70a200dd8b15e47dcef848cf08244f04c9
