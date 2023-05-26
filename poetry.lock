@@ -1156,13 +1156,13 @@ gitlab = ["python-gitlab (>=1.3.0)"]
 
 [[package]]
 name = "scovie"
-version = "0.0.3"
+version = "0.0.4"
 description = "Scovie is an open-source digital signage system for high schools."
 optional = false
 python-versions = ">=3.9,<4.0.0"
 files = [
-    {file = "scovie-0.0.3-py3-none-any.whl", hash = "sha256:1073ef162cd05787002b774d91edd3f7e49b0905e34c3b66316358626d602958"},
-    {file = "scovie-0.0.3.tar.gz", hash = "sha256:08f6bea675075f5881eed1662b21d2b9b17329b7de5413658cd4cd69e7aa4171"},
+    {file = "scovie-0.0.4-py3-none-any.whl", hash = "sha256:de7ae4f2c101f588019fafa6a1eda058af4f391f6ab2c23ae088b793f637c782"},
+    {file = "scovie-0.0.4.tar.gz", hash = "sha256:f17245e0b0d2048c1c8763086da33cf49335f8a9d49539d3997dbbf3e936cf59"},
 ]
 
 [package.dependencies]
@@ -1346,4 +1346,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.9,<4.0.0"
-content-hash = "2d6b12950702a6bfbb110029f6cfee02a319b044c137efb1ae8e2a657f251264"
+content-hash = "4b7b30c4d1972889b5b86a1cacdbd3f080182343ee06e21b460ff8ad557d90b6"

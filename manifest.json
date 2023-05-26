@@ -6,7 +6,7 @@
 		"en": "Scovie is an open-source digital signage system for high schools.",
 		"fr": "Scovie est un système d’affichage dynamique open-source pour les lycées."
 	},
-	"version": "0.0.1",
+	"version": "0.0.4",
 	"url": "https://github.com/eldertek/scovie_ynh",
     "upstream": {
         "license": "MIT",
