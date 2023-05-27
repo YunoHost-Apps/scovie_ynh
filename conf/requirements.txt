@@ -173,9 +173,9 @@ pyyaml==6.0 ; python_version >= "3.9" and python_full_version < "4.0.0" \
 redis==4.5.5 ; python_version >= "3.9" and python_full_version < "4.0.0" \
     --hash=sha256:77929bc7f5dab9adf3acba2d3bb7d7658f1e0c2f1cafe7eb36434e751c471119 \
     --hash=sha256:dc87a0bdef6c8bfe1ef1e1c40be7034390c2ae02d92dcd0c7ca1729443899880
-scovie==0.0.3 ; python_version >= "3.9" and python_full_version < "4.0.0" \
-    --hash=sha256:08f6bea675075f5881eed1662b21d2b9b17329b7de5413658cd4cd69e7aa4171 \
-    --hash=sha256:1073ef162cd05787002b774d91edd3f7e49b0905e34c3b66316358626d602958
+scovie==0.0.4 ; python_version >= "3.9" and python_full_version < "4.0.0" \
+    --hash=sha256:de7ae4f2c101f588019fafa6a1eda058af4f391f6ab2c23ae088b793f637c782 \
+    --hash=sha256:f17245e0b0d2048c1c8763086da33cf49335f8a9d49539d3997dbbf3e936cf59
 setuptools==67.8.0 ; python_version >= "3.9" and python_full_version < "4.0.0" \
     --hash=sha256:5df61bf30bb10c6f756eb19e7c9f3b473051f48db77fddbe06ff2ca307df9a6f \
     --hash=sha256:62642358adc77ffa87233bc4d2354c4b2682d214048f500964dbe760ccedf102
