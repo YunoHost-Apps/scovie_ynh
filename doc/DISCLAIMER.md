@@ -1,7 +1,7 @@
 ## local test
 
 For quicker developing of scovie_ynh in the context of YunoHost app,
-it's possible to run the Django developer server with the settings
+it's possible to run the Django development server with the settings
 and urls made for YunoHost installation.
 
 e.g.:
@@ -30,45 +30,26 @@ Notes:
 
 * SQlite database will be used
 * A super user with username `test` and password `test` is created
-* The page is available under `http://127.0.0.1:8000/app_path/`
+* The page is available under `http://127.0.0.1:8000/`
 
 
 ## history
 
-* [compare v0.1.5...master](https://github.com/eldertek/scovie_ynh/compare/v0.2.0...master) **dev**
-  * tbc
-* [v0.2.0 - 15.09.2021](https://github.com/eldertek/scovie_ynh/compare/v0.1.5...v0.2.0)
-  * rename/split `scovie_ynh` into:
-    * [django_yunohost_integration](https://github.com/jedie/django_yunohost_integration) - Python package with the glue code to integrate a Django project with YunoHost
-    * [scovie_ynh](https://github.com/eldertek/scovie_ynh) - Demo YunoHost App to demonstrate the integration of a Django project under YunoHost
-* [v0.1.5 - 19.01.2021](https://github.com/eldertek/scovie_ynh/compare/v0.1.4...v0.1.5)
-  * Make some deps `gunicorn`, `psycopg2-binary`, `django-redis`, `django-axes` optional
-* [v0.1.4 - 08.01.2021](https://github.com/eldertek/scovie_ynh/compare/v0.1.3...v0.1.4)
-  * Bugfix [CSRF verification failed on POST requests #7](https://github.com/eldertek/scovie_ynh/issues/7)
-* [v0.1.3 - 08.01.2021](https://github.com/eldertek/scovie_ynh/compare/v0.1.2...v0.1.3)
-  * set "DEBUG = True" in local_test (so static files are served and auth works)
-  * Bugfixes and cleanups
-* [v0.1.2 - 29.12.2020](https://github.com/eldertek/scovie_ynh/compare/v0.1.1...v0.1.2)
-  * Bugfixes
-* [v0.1.1 - 29.12.2020](https://github.com/eldertek/scovie_ynh/compare/v0.1.0...v0.1.1)
-  * Refactor "create_superuser" to a manage command, useable via "scovie_ynh" in `INSTALLED_APPS`
-  * Generate "conf/requirements.txt" and use this file for install
-  * rename own settings and urls (in `/conf/`)
-* [v0.1.0 - 28.12.2020](https://github.com/eldertek/scovie_ynh/compare/f578f14...v0.1.0)
+* [v0.0.5 - 27.05.2023](https://github.com/eldertek/scovie_ynh/compare/4b0275e7f75d199dca8a1e97c26dc8568c31cb52...4f0086c7da6123f3f8b05c4001f9109891e6bd9f)
   * first working state
-* [23.12.2020](https://github.com/eldertek/scovie_ynh/commit/f578f144a3a6d11d7044597c37d550d29c247773)
+* [26.05.2023](https://github.com/eldertek/scovie_ynh/commit/4b0275e7f75d199dca8a1e97c26dc8568c31cb52)
   * init the project
 
 
 ## Links
 
-* Report a bug about this package: https://github.com/eldertek/scovie_ynh
+* Report a bug about this package: https://github.com/eldertek/scovie_ynh/issues
 * YunoHost website: https://yunohost.org/
-* PyPi package: https://pypi.org/project/django-ynh/
+* PyPi package: https://pypi.org/project/scovie/
 
 These projects used `scovie_ynh`:
 
-* https://github.com/eldertek/scovie
+* https://github.com/eldertek/scovie_ynh
 
 ---
 
@@ -147,5 +128,3 @@ root@yunohost:~# cat /etc/systemd/system/systemd.service
 root@yunohost:~# systemctl reload-or-restart scovie_ynh
 root@yunohost:~# journalctl --unit=scovie_ynh --follow
 ```
-
-
