@@ -1,13 +1,5 @@
 """
     urls.py
-    ~~~~~~~
-
-    Look at real examples, here:
-
-     * https://github.com/eldertek/django-fritzconnection_ynh/blob/master/conf/urls.py
-     * https://github.com/eldertek/django-for-runners_ynh/blob/testing/conf/urls.py
-     * https://github.com/eldertek/pyinventory_ynh/blob/testing/conf/urls.py
-
 """
 
 

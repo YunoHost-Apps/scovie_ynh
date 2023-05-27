@@ -68,8 +68,7 @@ Notes:
 
 These projects used `scovie_ynh`:
 
-* https://github.com/eldertek/scovie_ynh
-* https://github.com/eldertek/django-for-runners_ynh
+* https://github.com/eldertek/scovie
 
 ---
 
