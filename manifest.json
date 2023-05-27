@@ -9,7 +9,7 @@
 	"version": "0.0.4",
 	"url": "https://github.com/eldertek/scovie_ynh",
     "upstream": {
-        "license": "MIT",
+        "license": "GPL-3.0",
         "website": "https://github.com/eldertek/scovie",
         "code": "https://github.com/eldertek/scovie_ynh"
     },
