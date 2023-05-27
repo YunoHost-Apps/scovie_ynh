@@ -63,9 +63,9 @@ Notes:
 
 ## history
 
-* [v0.0.5 - 27.05.2023](https://github.com/eldertek/scovie_ynh/compare/4b0275e7f75d199dca8a1e97c26dc8568c31cb52...4f0086c7da6123f3f8b05c4001f9109891e6bd9f)
+* [v0.0.5 - 27.05.2023](https://github.com/YunoHost-Apps/scovie_ynh/compare/4b0275e7f75d199dca8a1e97c26dc8568c31cb52...4f0086c7da6123f3f8b05c4001f9109891e6bd9f)
   * first working state
-* [26.05.2023](https://github.com/eldertek/scovie_ynh/commit/4b0275e7f75d199dca8a1e97c26dc8568c31cb52)
+* [26.05.2023](https://github.com/YunoHost-Apps/scovie_ynh/commit/4b0275e7f75d199dca8a1e97c26dc8568c31cb52)
   * init the project
 
 
