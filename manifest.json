@@ -1,6 +1,6 @@
 {
 	"name": "Scovie",
-	"id": "scovie_ynh",
+	"id": "scovie",
 	"packaging_format": 1,
 	"description": {
 		"en": "Scovie is an open-source digital signage system for high schools.",
