@@ -24,13 +24,12 @@ If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/in
 
 ## Overview
 
-[![pytest](https://github.com/eldertek/scovie_ynh/actions/workflows/pytest.yml/badge.svg)](https://github.com/eldertek/scovie_ynh/actions/workflows/pytest.yml) [![YunoHost apps package linter](https://github.com/eldertek/scovie_ynh/actions/workflows/package_linter.yml/badge.svg)](https://github.com/eldertek/scovie_ynh/actions/workflows/package_linter.yml)
-
 [Scovie](https://github.com/eldertek/scovie) is an open-source digital signage system for high schools, built using Python and Django. It provides an easy-to-use interface for administrators to upload and manage multimedia content, which is then displayed on screens throughout the school.
 
 You can try the [demo](https://scovie.eclipse-technology.eu) here.
 
 Pull requests welcome ;)
+
 
 **Version incluse :** 0.0.4
 ## Avertissements / informations importantes
