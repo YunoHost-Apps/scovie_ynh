@@ -3,8 +3,8 @@
 	"id": "scovie",
 	"packaging_format": 1,
 	"description": {
-		"en": "Scovie is an open-source digital signage system for high schools.",
-		"fr": "Scovie est un système d’affichage dynamique open-source pour les lycées."
+		"en": "Digital signage system for high schools.",
+		"fr": "Affichage dynamique open-source pour les lycées."
 	},
 	"version": "0.0.5",
 	"url": "https://github.com/YunoHost-Apps/scovie_ynh",
