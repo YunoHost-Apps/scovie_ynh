@@ -5,9 +5,9 @@ It shall NOT be edited by hand.
 
 # Scovie for YunoHost
 
-[![Integration level](https://dash.yunohost.org/integration/scovie_ynh.svg)](https://dash.yunohost.org/appci/app/scovie_ynh) ![Working status](https://ci-apps.yunohost.org/ci/badges/scovie_ynh.status.svg) ![Maintenance status](https://ci-apps.yunohost.org/ci/badges/scovie_ynh.maintain.svg)
+[![Integration level](https://dash.yunohost.org/integration/scovie.svg)](https://dash.yunohost.org/appci/app/scovie) ![Working status](https://ci-apps.yunohost.org/ci/badges/scovie.status.svg) ![Maintenance status](https://ci-apps.yunohost.org/ci/badges/scovie.maintain.svg)
 
-[![Install Scovie with YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=scovie_ynh)
+[![Install Scovie with YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=scovie)
 
 *[Lire ce readme en français.](./README_fr.md)*
 
@@ -156,19 +156,19 @@ root@yunohost:~# journalctl --unit=scovie_ynh --follow
 
 * Official app website: <https://github.com/eldertek/scovie>
 * Upstream app code repository: <https://github.com/eldertek/scovie_ynh>
-* YunoHost documentation for this app: <https://yunohost.org/app_scovie_ynh>
-* Report a bug: <https://github.com/YunoHost-Apps/scovie_ynh_ynh/issues>
+* YunoHost documentation for this app: <https://yunohost.org/app_scovie>
+* Report a bug: <https://github.com/YunoHost-Apps/scovie_ynh/issues>
 
 ## Developer info
 
-Please send your pull request to the [testing branch](https://github.com/YunoHost-Apps/scovie_ynh_ynh/tree/testing).
+Please send your pull request to the [testing branch](https://github.com/YunoHost-Apps/scovie_ynh/tree/testing).
 
 To try the testing branch, please proceed like that.
 
 ``` bash
-sudo yunohost app install https://github.com/YunoHost-Apps/scovie_ynh_ynh/tree/testing --debug
+sudo yunohost app install https://github.com/YunoHost-Apps/scovie_ynh/tree/testing --debug
 or
-sudo yunohost app upgrade scovie_ynh -u https://github.com/YunoHost-Apps/scovie_ynh_ynh/tree/testing --debug
+sudo yunohost app upgrade scovie -u https://github.com/YunoHost-Apps/scovie_ynh/tree/testing --debug
 ```
 
 **More info regarding app packaging:** <https://yunohost.org/packaging_apps>
