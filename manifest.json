@@ -6,12 +6,12 @@
 		"en": "Digital signage system for high schools.",
 		"fr": "Affichage dynamique open-source pour les lycées."
 	},
-	"version": "0.0.4",
-	"url": "https://github.com/eldertek/scovie_ynh",
+	"version": "0.0.5",
+	"url": "https://github.com/YunoHost-Apps/scovie_ynh",
     "upstream": {
         "license": "GPL-3.0",
         "website": "https://github.com/eldertek/scovie",
-        "code": "https://github.com/eldertek/scovie_ynh"
+        "code": "https://github.com/eldertek/scovie"
     },
 	"license": "GPL-3.0",
 	"maintainer": {
