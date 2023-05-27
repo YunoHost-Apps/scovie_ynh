@@ -23,7 +23,7 @@ You can try the [demo](https://scovie.eclipse-technology.eu) here.
 Pull requests welcome ;)
 
 
-**Shipped version:** 0.0.5
+**Shipped version:** 0.0.4
 ## Disclaimers / important information
 
 ## local test
@@ -71,13 +71,13 @@ Notes:
 
 ## Links
 
-* Report a bug about this package: https://github.com/YunoHost-Apps/scovie_ynh/issues
+* Report a bug about this package: https://github.com/eldertek/scovie_ynh/issues
 * YunoHost website: https://yunohost.org/
 * PyPi package: https://pypi.org/project/scovie/
 
-These projects used `scovie`:
+These projects used `scovie_ynh`:
 
-* https://github.com/eldertek/scovie
+* https://github.com/eldertek/scovie_ynh
 
 ---
 
