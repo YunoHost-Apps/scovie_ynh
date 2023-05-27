@@ -7,11 +7,11 @@
 		"fr": "Scovie est un système d’affichage dynamique open-source pour les lycées."
 	},
 	"version": "0.0.5",
-	"url": "https://github.com/eldertek/scovie_ynh",
+	"url": "https://github.com/YunoHost-Apps/scovie_ynh",
     "upstream": {
         "license": "GPL-3.0",
         "website": "https://github.com/eldertek/scovie",
-        "code": "https://github.com/eldertek/scovie_ynh"
+        "code": "https://github.com/eldertek/scovie"
     },
 	"license": "GPL-3.0",
 	"maintainer": {
