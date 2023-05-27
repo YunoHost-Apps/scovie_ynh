@@ -23,7 +23,7 @@ You can try the [demo](https://scovie.eclipse-technology.eu) here.
 Pull requests welcome ;)
 
 
-**Version incluse :** 0.0.4
+**Version incluse :** 0.0.5
 ## Avertissements / informations importantes
 
 ## local test
