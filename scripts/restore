@@ -127,7 +127,7 @@ systemctl enable $app.service --quiet
 #=================================================
 ynh_script_progression --message="Integrating service in YunoHost..."
 
-yunohost service add $app --log="${log_file}"
+yunohost service add $app --description="Digital signage system for high schools" --log="${log_file}"
 
 #=================================================
 # RESTORE THE LOGROTATE CONFIGURATION
@@ -165,7 +165,7 @@ ynh_systemd_action --service_name="$app" --action="start"
 #=================================================
 # RELOAD NGINX
 #=================================================
-ynh_script_progression --message="Reloading nginx web server..."
+ynh_script_progression --message="Reloading NGINX web server..."
 
 ynh_systemd_action --service_name="nginx" --action="reload"
 
