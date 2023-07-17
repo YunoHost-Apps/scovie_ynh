@@ -22,58 +22,15 @@ If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/in
 **Shipped version:** 0.0.6~ynh1
 ## Disclaimers / important information
 
-## local test
-
-For quicker developing of scovie_ynh in the context of YunoHost app,
-it's possible to run the Django development server with the settings
-and urls made for YunoHost installation.
-
-e.g.:
-```bash
-~$ git clone https://github.com/eldertek/scovie_ynh.git
-~$ cd scovie_ynh/
-~/scovie_ynh$ make
-install-poetry         install or update poetry
-install                install project via poetry
-update                 update the sources and installation and generate "conf/requirements.txt"
-lint                   Run code formatters and linter
-fix-code-style         Fix code formatting
-tox-listenvs           List all tox test environments
-tox                    Run pytest via tox with all environments
-pytest                 Run pytest
-publish                Release new version to PyPi
-local-test             Run local_test.py to run the project locally
-local-diff-settings    Run "manage.py diffsettings" with local test
-
-~/scovie_ynh$ make install-poetry
-~/scovie_ynh$ make install
-~/scovie_ynh$ make local-test
-```
-
-Notes:
-
-* SQlite database will be used
-* A super user with username `test` and password `test` is created
-* The page is available under `http://127.0.0.1:8000/`
-
-
-## history
-
-* [v0.0.5 - 27.05.2023](https://github.com/eldertek/scovie_ynh/compare/4b0275e7f75d199dca8a1e97c26dc8568c31cb52...4f0086c7da6123f3f8b05c4001f9109891e6bd9f)
-  * first working state
-* [26.05.2023](https://github.com/eldertek/scovie_ynh/commit/4b0275e7f75d199dca8a1e97c26dc8568c31cb52)
-  * init the project
-
-
 ## Links
 
-* Report a bug about this package: https://github.com/eldertek/scovie_ynh/issues
+* Report a bug about this package: https://github.com/eldertek/scovie/issues
 * YunoHost website: https://yunohost.org/
 * PyPi package: https://pypi.org/project/scovie/
 
-These projects used `scovie_ynh`:
+These projects used `scovie`:
 
-* https://github.com/eldertek/scovie_ynh
+* https://github.com/eldertek/scovie
 
 ---
 
