@@ -113,7 +113,7 @@ root@yunohost:~# journalctl --unit=scovie_ynh --follow
 ## Documentation and resources
 
 * Upstream app code repository: <https://github.com/eldertek/scovie>
-* YunoHost documentation for this app: <https://yunohost.org/app_scovie>
+* YunoHost Store: <https://apps.yunohost.org/app/scovie>
 * Report a bug: <https://github.com/YunoHost-Apps/scovie_ynh/issues>
 
 ## Developer info
