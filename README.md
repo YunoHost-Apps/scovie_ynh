@@ -20,6 +20,11 @@ If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/in
 
 
 **Shipped version:** 0.0.6~ynh1
+
+## Screenshots
+
+![Screenshot of Scovie](./doc/screenshots/all.png)
+
 ## Disclaimers / important information
 
 ## Links
