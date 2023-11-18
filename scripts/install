@@ -20,10 +20,10 @@ ynh_abort_if_errors
 ynh_script_progression --message="Validating installation parameters..."
 
 # Path for e.g. "static" files, served by nginx:
-# test ! -e "$public_path" || ynh_die --message="This path already contains a folder"
+test ! -e "$public_path" || ynh_die --message="This path already contains a folder"
 
 # Path for own config files, e.g.: Django's settings.py:
-# test ! -e "$final_path" || ynh_die --message="This path already contains a folder"
+test ! -e "$final_path" || ynh_die --message="This path already contains a folder"
 
 # Register (book) web path
 ynh_webpath_register --app="$app" --domain="$domain" --path_url="$path_url"
