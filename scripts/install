@@ -87,10 +87,10 @@ ynh_add_nginx_config
 
 # Create a dedicated NGINX config using the conf/nginx.conf template
 ynh_add_systemd_config --service="$app" --template="systemd.service"
-yunohost service add "$app" --description="Digital signage system for high schools" --log="$log_file"
+yunohost service add "$app" --description=Digital signage system for high schools --log="/var/log/$app/$app.log"
 
 # Use logrotate to manage app-specific logfile(s)
-ynh_use_logrotate "$log_file"
+ynh_use_logrotate "/var/log/$app/$app.log"
 
 #=================================================
 # Start the app server via systemd
