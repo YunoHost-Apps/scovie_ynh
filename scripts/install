@@ -27,14 +27,16 @@ ynh_app_setting_set --app="$app" --key=default_from_email --value="$default_from
 #=================================================
 ynh_script_progression --message="Installing project via pip..." --weight=45
 
-mkdir -p "$install_dir/media" "$install_dir/static"
 _install_scovie_venv
+
+mkdir -p "$install_dir/public/media" "$install_dir/public/static"
 
 chmod o-rwx "$install_dir"
 chown -R "$app:www-data" "$install_dir"
 
 mkdir -p "$log_path"
 touch "$log_file"
+
 chmod o-rwx "$log_path"
 chown -R "$app:$app" "$log_path"
 

@@ -21,7 +21,6 @@ admin_email="${admin}@${domain}"
 default_from_email="${app}@${domain}"
 
 
-public_path=/var/www/$app
 #REMOVEME? install_dir=/opt/yunohost/$app
 log_path=/var/log/$app
 log_file="${log_path}/${app}.log"

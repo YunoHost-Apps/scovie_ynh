@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 ################################################################################
 ################################################################################
 
@@ -9,7 +11,7 @@
 ################################################################################
 ################################################################################
 
-from pathlib import Path as __Path
+from pathlib import Path
 
 from django.contrib.admin.sites import AdminSite
 from django.utils.translation import gettext_lazy as _
@@ -24,13 +26,13 @@ from scovie.settings.prod import *  # noqa:F401,F403 isort:skip
 from django_yunohost_integration.base_settings import LOGGING  # noqa:F401 isort:skip
 
 
-INSTALL_DIR = __Path('__INSTALL_DIR__')  # /opt/yunohost/$app
+INSTALL_DIR = Path('__INSTALL_DIR__')
 assert INSTALL_DIR.is_dir(), f'Directory not exists: {INSTALL_DIR}'
 
-PUBLIC_PATH = __Path('__INSTALL_DIR__')  # /var/www/$app
+PUBLIC_PATH = Path('__INSTALL_DIR__/public')
 assert PUBLIC_PATH.is_dir(), f'Directory not exists: {PUBLIC_PATH}'
 
-LOG_FILE = __Path('__LOG_FILE__')  # /var/log/$app/scovie_ynh.log
+LOG_FILE = Path('/var/log/__APP__/__APP__.log')
 assert LOG_FILE.is_file(), f'File not exists: {LOG_FILE}'
 
 PATH = '__PATH__'  # $YNH_APP_ARG_PATH

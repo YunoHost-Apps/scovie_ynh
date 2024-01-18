@@ -10,73 +10,21 @@ source ../settings/scripts/_common.sh
 source /usr/share/yunohost/helpers
 
 #=================================================
-# MANAGE SCRIPT FAILURE
-#=================================================
-
-#REMOVEME? ynh_abort_if_errors
-
-#=================================================
-# LOAD SETTINGS
-#=================================================
-ynh_script_progression --message="Loading settings..."
-
-#REMOVEME? #REMOVEME? install_dir=$(ynh_app_setting_get --app="$app" --key=install_dir)
-#REMOVEME? public_path=$(ynh_app_setting_get --app="$app" --key=public_path)
-#REMOVEME? db_name=$(ynh_app_setting_get --app="$app" --key=db_name)
-#REMOVEME? db_user=$db_name
-#REMOVEME? db_pwd=$(ynh_app_setting_get --app="$app" --key=psqlpwd)
-
-#REMOVEME? domain=$(ynh_app_setting_get --app="$app" --key=domain)
-#REMOVEME? path=$(ynh_app_setting_get --app="$app" --key=path)
-
-#=================================================
-# CHECK IF THE APP CAN BE RESTORED
-#=================================================
-#REMOVEME? ynh_script_progression --message="Validating restoration parameters..."
-
-#REMOVEME? test ! -d $install_dir \
-	|| ynh_die --message="There is already a directory: $install_dir "
-
-#=================================================
-# STANDARD RESTORATION STEPS
-#=================================================
-# RESTORE THE NGINX CONFIGURATION
-#=================================================
-
-ynh_restore_file --origin_path="/etc/nginx/conf.d/$domain.d/$app.conf"
-
-#=================================================
 # RESTORE THE APP MAIN DIR
 #=================================================
-ynh_script_progression --message="Restoring $app  main directory..."
+ynh_script_progression --message="Restoring the app main directory..." --weight=1
 
 ynh_restore_file --origin_path="$install_dir"
-ynh_restore_file --origin_path="$public_path"
+
+chmod o-rwx "$install_dir"
+chown -R "$app:www-data" "$install_dir"
 
 #=================================================
-# RECREATE THE DEDICATED USER
+# RESTORE THE POSTGRES DATABASE
 #=================================================
-#REMOVEME? ynh_script_progression --message="Recreating the dedicated system user..."
+ynh_script_progression --message="Restoring the Postgresql database..." --weight=1
 
-# Create the dedicated user (if not existing)
-#REMOVEME? ynh_system_user_create --username=$app --home_dir="$install_dir" --use_shell
-
-#=================================================
-# RESTORE USER RIGHTS
-#=================================================
-
-# Restore permissions on app files
-chown -R "$app:www-data" "$public_path"
-chown -R "$app:" "$install_dir"
-
-#=================================================
-# SPECIFIC RESTORATION
-#=================================================
-# REINSTALL DEPENDENCIES
-#=================================================
-#REMOVEME? ynh_script_progression --message="Reinstalling dependencies..." --weight=20
-
-#REMOVEME? ynh_exec_warn_less ynh_install_app_dependencies "$pkg_dependencies"
+ynh_psql_connect_as --user="$db_user" --password="$db_pwd" --database="$db_name" < ./db.sql
 
 #=================================================
 # PYTHON VIRTUALENV
@@ -97,77 +45,41 @@ chown -R "$app:" "$install_dir"
 ynh_script_progression --message="Install project via pip..." --weight=45
 #run source in a 'sub shell'
 (
-	set +o nounset
-	source "${install_dir}/venv/bin/activate"
-	set -o nounset
-	ynh_exec_as $app $install_dir/venv/bin/python3 -m ensurepip
-	ynh_exec_as $app $install_dir/venv/bin/pip3 install --upgrade wheel pip setuptools
-	ynh_exec_as $app $install_dir/venv/bin/pip3 install --no-deps -r "$install_dir/requirements.txt"
+    set +o nounset
+    source "${install_dir}/venv/bin/activate"
+    set -o nounset
+    ynh_exec_as $app $install_dir/venv/bin/python3 -m ensurepip
+    ynh_exec_as $app $install_dir/venv/bin/pip3 install --upgrade wheel pip setuptools
+    ynh_exec_as $app $install_dir/venv/bin/pip3 install --no-deps -r "$install_dir/requirements.txt"
 )
 
 #=================================================
-# RESTORE THE PostgreSQL DATABASE
+# RESTORE SYSTEM CONFIGURATIONS
 #=================================================
-#REMOVEME? ynh_script_progression --message="Restoring the PostgreSQL database..." --weight=5
+ynh_script_progression --message="Restoring system configurations related to $app..." --weight=1
 
-#REMOVEME? ynh_psql_test_if_first_run
-#REMOVEME? ynh_psql_setup_db --db_user="$db_user" --db_name="$db_name" --db_pwd="$db_pwd"
-ynh_psql_connect_as --user=$db_user --password=$db_pwd --database=$db_name < ./db.sql
-
-#=================================================
-# RESTORE SYSTEMD
-#=================================================
-ynh_script_progression --message="Restoring the systemd configuration..."
+ynh_restore_file --origin_path="/etc/nginx/conf.d/$domain.d/$app.conf"
 
 ynh_restore_file --origin_path="/etc/systemd/system/$app.service"
-systemctl enable $app.service --quiet
+systemctl enable "$app.service" --quiet
+yunohost service add "$app" --description="Digital signage system for high schools" --log="$log_file"
 
-#=================================================
-# INTEGRATE SERVICE IN YUNOHOST
-#=================================================
-ynh_script_progression --message="Integrating service in YunoHost..."
-
-yunohost service add $app --description="Digital signage system for high schools" --log="${log_file}"
-
-#=================================================
-# RESTORE THE LOGROTATE CONFIGURATION
-#=================================================
-
-mkdir -p "$log_path"
-touch "${log_file}"
-chown -R "$app:" "$log_path"
 ynh_restore_file --origin_path="/etc/logrotate.d/$app"
 
-#=================================================
-# GENERIC FINALIZATION
-#=================================================
-# SECURE FILES AND DIRECTORIES
-#=================================================
-
-# Set permissions to app files
-chown -R "$app:" "$log_path"
-chown -R "$app:www-data" "$public_path"
-chown -R "$app:" "$install_dir"
-
-chmod o-rwx "$log_path"
-chmod o-rwx "$public_path"
-chmod o-rwx "$install_dir"
+ynh_restore_file --origin_path="/var/log/$app/"
+chmod o-rwx "/var/log/$app"
+chown -R "$app:" "/var/log/$app"
 
 #=================================================
 # GENERIC FINALIZATION
 #=================================================
-# START PYINVENTORY
+# RELOAD NGINX AND PHP-FPM OR THE APP SERVICE
 #=================================================
-ynh_script_progression --message="Starting systemd service '$app'..." --weight=5
+ynh_script_progression --message="Reloading NGINX web server and $app's service..." --weight=1
 
-ynh_systemd_action --service_name="$app" --action="start"
+ynh_systemd_action --service_name="$app" --action="start" --log_path="/var/log/$app/$app.log"
 
-#=================================================
-# RELOAD NGINX
-#=================================================
-ynh_script_progression --message="Reloading NGINX web server..."
-
-ynh_systemd_action --service_name="nginx" --action="reload"
+ynh_systemd_action --service_name=nginx --action=reload
 
 #=================================================
 # END OF SCRIPT
