@@ -76,20 +76,20 @@ ynh_add_config --template="wsgi.py" --destination="$install_dir/wsgi.py"
 #=================================================
 ynh_script_progression --message="migrate/collectstatic/createadmin..." --weight=10
 
-cd "$install_dir" || exit
+pushd "$install_dir"
+    # Just for debugging:
+    ynh_exec_as "$app" "$venvpython" ./manage.py diffsettings
 
-# Just for debugging:
-./manage.py diffsettings
+    ynh_exec_as "$app" "$venvpython" ./manage.py migrate --no-input
+    ynh_exec_as "$app" "$venvpython" ./manage.py collectstatic --no-input
 
-./manage.py migrate --no-input
-./manage.py collectstatic --no-input
+    # Create/update Django superuser (set unusable password, because auth done via SSOwat):
+    ynh_exec_as "$app" "$venvpython" ./manage.py create_superuser --username="$admin" --email="$(ynh_user_get_info "$admin" mail)"
 
-# Create/update Django superuser (set unusable password, because auth done via SSOwat):
-./manage.py create_superuser --username="$admin" --email="$(ynh_user_get_info "$admin" mail)"
-
-# Check the configuration
-# This may fail in some cases with errors, etc., but the app works and the user can fix issues later.
-./manage.py check --deploy || true
+    # Check the configuration
+    # This may fail in some cases with errors, etc., but the app works and the user can fix issues later.
+    ynh_exec_as "$app" "$venvpython" ./manage.py check --deploy || true
+popd
 
 #=================================================
 # REAPPLY SYSTEM CONFIGURATIONS
