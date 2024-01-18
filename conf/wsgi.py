@@ -1,8 +1,9 @@
+#!/usr/bin/env python3
+
 """
     WSGI config
 """
 import os
-
 
 os.environ['DJANGO_SETTINGS_MODULE'] = 'settings'
 
