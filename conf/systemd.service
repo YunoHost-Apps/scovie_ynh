@@ -5,8 +5,8 @@ After=redis.service postgresql.service
 [Service]
 User=__APP__
 Group=__APP__
-WorkingDirectory=__FINALPATH__/
-ExecStart=__FINALPATH__/venv/bin/gunicorn --config __FINALPATH__/gunicorn.conf.py wsgi
+WorkingDirectory=__INSTALL_DIR__/
+ExecStart=__INSTALL_DIR__/venv/bin/gunicorn --config __INSTALL_DIR__/gunicorn.conf.py wsgi
 StandardOutput=syslog
 StandardError=syslog
 SyslogIdentifier=__APP__-server

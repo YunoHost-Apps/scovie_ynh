@@ -10,46 +10,46 @@ source /usr/share/yunohost/helpers
 #=================================================
 # LOAD SETTINGS
 #=================================================
-ynh_script_progression --message="Loading installation settings..."
+#REMOVEME? ynh_script_progression --message="Loading installation settings..."
 
-admin=$(ynh_app_setting_get --app="$app" --key=admin)
-public_path=$(ynh_app_setting_get --app="$app" --key=public_path)
-final_path=$(ynh_app_setting_get --app="$app" --key=final_path)
-log_path=$(ynh_app_setting_get --app="$app" --key=log_path)
+#REMOVEME? admin=$(ynh_app_setting_get --app="$app" --key=admin)
+#REMOVEME? public_path=$(ynh_app_setting_get --app="$app" --key=public_path)
+#REMOVEME? #REMOVEME? install_dir=$(ynh_app_setting_get --app="$app" --key=install_dir)
+#REMOVEME? log_path=$(ynh_app_setting_get --app="$app" --key=log_path)
 
-domain=$(ynh_app_setting_get --app="$app" --key=domain)
-path_url=$(ynh_app_setting_get --app="$app" --key=path)
+#REMOVEME? domain=$(ynh_app_setting_get --app="$app" --key=domain)
+#REMOVEME? path=$(ynh_app_setting_get --app="$app" --key=path)
 
-port=$(ynh_app_setting_get --app="$app" --key=port)
+#REMOVEME? port=$(ynh_app_setting_get --app="$app" --key=port)
 
-db_pwd=$(ynh_app_setting_get --app="$app" --key=psqlpwd)
-db_name=$(ynh_sanitize_dbid --db_name="$app")
-db_user=$db_name
+#REMOVEME? db_pwd=$(ynh_app_setting_get --app="$app" --key=psqlpwd)
+#REMOVEME? db_name=$(ynh_sanitize_dbid --db_name="$app")
+#REMOVEME? db_user=$db_name
 
-redis_db=$(ynh_app_setting_get --app="$app" --key=redis_db)
+#REMOVEME? redis_db=$(ynh_app_setting_get --app="$app" --key=redis_db)
 
 #-------------------------------------------------
 # config_panel.toml settings:
 
-debug_enabled=$(ynh_app_setting_get --app="$app" --key=debug_enabled)
+#REMOVEME? debug_enabled=$(ynh_app_setting_get --app="$app" --key=debug_enabled)
 if [ -z "$debug_enabled" ]; then
 	debug_enabled="0"
 	ynh_app_setting_set --app="$app" --key=debug_enabled --value="$debug_enabled"
 fi
 
-log_level=$(ynh_app_setting_get --app="$app" --key=log_level)
+#REMOVEME? log_level=$(ynh_app_setting_get --app="$app" --key=log_level)
 if [ -z "$log_level" ]; then
 	log_level="WARNING"
 	ynh_app_setting_set --app="$app" --key=log_level --value="$log_level"
 fi
 
-admin_email=$(ynh_app_setting_get --app="$app" --key=admin_email)
+#REMOVEME? admin_email=$(ynh_app_setting_get --app="$app" --key=admin_email)
 if [ -z "$admin_email" ]; then
 	admin_email="${admin}@${domain}"
-	ynh_app_setting_set --app="$app" --key=admin_email --value="$admin_email"
+#REMOVEME? 	ynh_app_setting_set --app="$app" --key=admin_email --value="$admin_email"
 fi
 
-default_from_email=$(ynh_app_setting_get --app="$app" --key=default_from_email)
+#REMOVEME? default_from_email=$(ynh_app_setting_get --app="$app" --key=default_from_email)
 if [ -z "$default_from_email" ]; then
 	default_from_email="${app}@${domain}"
 	ynh_app_setting_set --app="$app" --key=default_from_email --value="$default_from_email"
@@ -61,13 +61,13 @@ fi
 ynh_script_progression --message="Backing up $app before upgrading (may take a while)..." --weight=40
 
 # Backup the current version of the app
-ynh_backup_before_upgrade
-ynh_clean_setup () {
+#REMOVEME? ynh_backup_before_upgrade
+#REMOVEME? ynh_clean_setup () {
 	# restore it if the upgrade fails
-	ynh_restore_upgradebackup
+#REMOVEME? 	ynh_restore_upgradebackup
 }
 # Exit if an error occurs during the execution of the script
-ynh_abort_if_errors
+#REMOVEME? ynh_abort_if_errors
 
 #=================================================
 # STANDARD UPGRADE STEPS
@@ -93,17 +93,17 @@ ynh_add_nginx_config "public_path" "port"
 #=================================================
 # Update dependencies
 #=================================================
-ynh_script_progression --message="Upgrading dependencies..." --weight=20
+#REMOVEME? ynh_script_progression --message="Upgrading dependencies..." --weight=20
 
-ynh_exec_warn_less ynh_install_app_dependencies "$pkg_dependencies"
+#REMOVEME? ynh_exec_warn_less ynh_install_app_dependencies "$pkg_dependencies"
 
 #=================================================
 # CREATE DEDICATED USER
 #=================================================
-ynh_script_progression --message="Making sure dedicated system user exists..."
+#REMOVEME? ynh_script_progression --message="Making sure dedicated system user exists..."
 
 # Create a system user
-ynh_system_user_create --username="$app" --home_dir="$final_path" --use_shell
+#REMOVEME? ynh_system_user_create --username="$app" --home_dir="$install_dir" --use_shell
 
 #=================================================
 # SETUP SYSTEMD
@@ -118,13 +118,13 @@ ynh_add_systemd_config --service="$app" --template="systemd.service"
 ynh_script_progression --message="Recreate Python virtualenv..." --weight=5
 
 # Always recreate everything fresh with current python version
-ynh_secure_remove "${final_path}/venv"
+ynh_secure_remove "${install_dir}/venv"
 
 # Skip pip because of: https://github.com/YunoHost/issues/issues/1960
-python3 -m venv --without-pip "${final_path}/venv"
+python3 -m venv --without-pip "${install_dir}/venv"
 
-cp ../conf/requirements.txt "$final_path/requirements.txt"
-chown -R "$app:" "$final_path"
+cp ../conf/requirements.txt "$install_dir/requirements.txt"
+chown -R "$app:" "$install_dir"
 
 #=================================================
 # PIP INSTALLATION
@@ -133,11 +133,11 @@ ynh_script_progression --message="Install project via pip..." --weight=45
 #run source in a 'sub shell'
 (
 	set +o nounset
-	source "${final_path}/venv/bin/activate"
+	source "${install_dir}/venv/bin/activate"
 	set -o nounset
-	ynh_exec_as $app $final_path/venv/bin/python3 -m ensurepip
-	ynh_exec_as $app $final_path/venv/bin/pip3 install --upgrade wheel pip setuptools
-	ynh_exec_as $app $final_path/venv/bin/pip3 install --no-deps -r "$final_path/requirements.txt"
+	ynh_exec_as $app $install_dir/venv/bin/python3 -m ensurepip
+	ynh_exec_as $app $install_dir/venv/bin/pip3 install --upgrade wheel pip setuptools
+	ynh_exec_as $app $install_dir/venv/bin/pip3 install --no-deps -r "$install_dir/requirements.txt"
 )
 
 #=================================================
@@ -145,22 +145,22 @@ ynh_script_progression --message="Install project via pip..." --weight=45
 # ================================================
 ynh_script_progression --message="Create project configuration files..."
 
-ynh_add_config --template="gunicorn.conf.py" --destination="$final_path/gunicorn.conf.py"
+ynh_add_config --template="gunicorn.conf.py" --destination="$install_dir/gunicorn.conf.py"
 
-ynh_add_config --template="manage.py" --destination="$final_path/manage.py"
-chmod +x "$final_path/manage.py"
+ynh_add_config --template="manage.py" --destination="$install_dir/manage.py"
+chmod +x "$install_dir/manage.py"
 
-ynh_add_config --template="settings.py" --destination="$final_path/settings.py"
-ynh_add_config --template="setup_user.py" --destination="$final_path/setup_user.py"
-ynh_add_config --template="urls.py" --destination="$final_path/urls.py"
-ynh_add_config --template="wsgi.py" --destination="$final_path/wsgi.py"
+ynh_add_config --template="settings.py" --destination="$install_dir/settings.py"
+ynh_add_config --template="setup_user.py" --destination="$install_dir/setup_user.py"
+ynh_add_config --template="urls.py" --destination="$install_dir/urls.py"
+ynh_add_config --template="wsgi.py" --destination="$install_dir/wsgi.py"
 
 #=================================================
 # MIGRATE PYINVENTORY
 #=================================================
 ynh_script_progression --message="migrate/collectstatic/createadmin..." --weight=10
 
-cd "$final_path" || exit
+cd "$install_dir" || exit
 
 # Just for debugging:
 ./manage.py diffsettings
@@ -200,11 +200,11 @@ yunohost service add $app --description="Digital signage system for high schools
 # Set permissions to app files
 chown -R "$app:" "$log_path"
 chown -R "$app:www-data" "$public_path"
-chown -R "$app:" "$final_path"
+chown -R "$app:" "$install_dir"
 
 chmod o-rwx "$log_path"
 chmod o-rwx "$public_path"
-chmod o-rwx "$final_path"
+chmod o-rwx "$install_dir"
 
 #=================================================
 # Start the app server via systemd
@@ -216,9 +216,9 @@ ynh_systemd_action --service_name="$app" --action="start"
 #=================================================
 # RELOAD NGINX
 #=================================================
-ynh_script_progression --message="Reloading NGINX web server..."
+#REMOVEME? ynh_script_progression --message="Reloading NGINX web server..."
 
-ynh_systemd_action --service_name=nginx --action=reload
+#REMOVEME? ynh_systemd_action --service_name=nginx --action=reload
 
 #=================================================
 # END OF SCRIPT

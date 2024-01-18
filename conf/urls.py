@@ -8,12 +8,12 @@ from django.urls import include, path
 from django.views.generic import RedirectView
 
 
-if settings.PATH_URL:
-    # settings.PATH_URL is the $YNH_APP_ARG_PATH
-    # Prefix all urls with "PATH_URL":
+if settings.PATH:
+    # settings.PATH is the $YNH_APP_ARG_PATH
+    # Prefix all urls with "PATH":
     urlpatterns = [
-        path('', RedirectView.as_view(url=f'{settings.PATH_URL}/')),
-        path(f'{settings.PATH_URL}/', include('scovie.urls')),
+        path('', RedirectView.as_view(url=f'{settings.PATH}/')),
+        path(f'{settings.PATH}/', include('scovie.urls')),
     ]
 else:
     # Installed to domain root, without a path prefix
