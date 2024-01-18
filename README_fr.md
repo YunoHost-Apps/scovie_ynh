@@ -21,6 +21,8 @@ Si vous n’avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) po
 
 **Version incluse :** 0.0.6~ynh2
 
+**Démo :** https://scovie.eclipse-technology.eu
+
 ## Captures d’écran
 
 ![Capture d’écran de Scovie](./doc/screenshots/all.png)

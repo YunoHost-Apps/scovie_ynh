@@ -21,6 +21,8 @@ If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/in
 
 **Shipped version:** 0.0.6~ynh2
 
+**Demo:** https://scovie.eclipse-technology.eu
+
 ## Screenshots
 
 ![Screenshot of Scovie](./doc/screenshots/all.png)
