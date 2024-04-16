@@ -7,7 +7,7 @@ name = "Scovie"
 description.en = "Digital signage system for high schools"
 description.fr = "Affichage dynamique open-source pour les lycées"
 
-version = "0.0.6~ynh2"
+version = "0.0.6~ynh3"
 
 maintainers = ["André Théo LAURET"]
 
