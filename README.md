@@ -9,7 +9,7 @@ It shall NOT be edited by hand.
 
 [![Install Scovie with YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=scovie)
 
-*[Read this README is other languages.](./ALL_README.md)*
+*[Read this README in other languages.](./ALL_README.md)*
 
 > *This package allows you to install Scovie quickly and simply on a YunoHost server.*  
 > *If you don't have YunoHost, please consult [the guide](https://yunohost.org/install) to learn how to install it.*
@@ -25,7 +25,7 @@ It provides an easy-to-use interface for administrators to upload and manage mul
 * PyPi package: <https://pypi.org/project/scovie/>
 
 
-**Shipped version:** 0.0.6~ynh2
+**Shipped version:** 0.0.6~ynh3
 
 **Demo:** <https://scovie.eclipse-technology.eu>
 
