@@ -3,7 +3,7 @@
 请勿手动编辑。
 -->
 
-# YunoHost 的 Scovie
+# YunoHost 上的 Scovie
 
 [![集成程度](https://dash.yunohost.org/integration/scovie.svg)](https://dash.yunohost.org/appci/app/scovie) ![工作状态](https://ci-apps.yunohost.org/ci/badges/scovie.status.svg) ![维护状态](https://ci-apps.yunohost.org/ci/badges/scovie.maintain.svg)
 
