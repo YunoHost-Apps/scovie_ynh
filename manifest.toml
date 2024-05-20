@@ -17,7 +17,7 @@ code = "https://github.com/eldertek/scovie"
 demo = "https://scovie.eclipse-technology.eu"
 
 [integration]
-yunohost = ">=11.2"
+yunohost = ">=11.2.12"
 architectures = "all"
 multi_instance = true
 ldap = true
