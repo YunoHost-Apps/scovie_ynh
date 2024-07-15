@@ -5,7 +5,7 @@ EZ editatu eskuz.
 
 # Scovie YunoHost-erako
 
-[![Integrazio maila](https://dash.yunohost.org/integration/scovie.svg)](https://dash.yunohost.org/appci/app/scovie) ![Funtzionamendu egoera](https://ci-apps.yunohost.org/ci/badges/scovie.status.svg) ![Mantentze egoera](https://ci-apps.yunohost.org/ci/badges/scovie.maintain.svg)
+[![Integrazio maila](https://dash.yunohost.org/integration/scovie.svg)](https://ci-apps.yunohost.org/ci/apps/scovie/) ![Funtzionamendu egoera](https://ci-apps.yunohost.org/ci/badges/scovie.status.svg) ![Mantentze egoera](https://ci-apps.yunohost.org/ci/badges/scovie.maintain.svg)
 
 [![Instalatu Scovie YunoHost-ekin](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=scovie)
 

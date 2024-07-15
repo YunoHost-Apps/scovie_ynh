@@ -5,7 +5,7 @@ It shall NOT be edited by hand.
 
 # Scovie for YunoHost
 
-[![Integration level](https://dash.yunohost.org/integration/scovie.svg)](https://dash.yunohost.org/appci/app/scovie) ![Working status](https://ci-apps.yunohost.org/ci/badges/scovie.status.svg) ![Maintenance status](https://ci-apps.yunohost.org/ci/badges/scovie.maintain.svg)
+[![Integration level](https://dash.yunohost.org/integration/scovie.svg)](https://ci-apps.yunohost.org/ci/apps/scovie/) ![Working status](https://ci-apps.yunohost.org/ci/badges/scovie.status.svg) ![Maintenance status](https://ci-apps.yunohost.org/ci/badges/scovie.maintain.svg)
 
 [![Install Scovie with YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=scovie)
 
