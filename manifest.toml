@@ -64,6 +64,7 @@ ram.runtime = "300M"
         "libpq-dev",
         "postgresql",
         "postgresql-contrib",
+        "redis-server",
     ]
 
     [resources.database]
