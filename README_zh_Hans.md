@@ -5,7 +5,9 @@
 
 # YunoHost 上的 Scovie
 
-[![集成程度](https://dash.yunohost.org/integration/scovie.svg)](https://ci-apps.yunohost.org/ci/apps/scovie/) ![工作状态](https://ci-apps.yunohost.org/ci/badges/scovie.status.svg) ![维护状态](https://ci-apps.yunohost.org/ci/badges/scovie.maintain.svg)
+[![集成程度](https://apps.yunohost.org/badge/integration/scovie)](https://ci-apps.yunohost.org/ci/apps/scovie/)
+![工作状态](https://apps.yunohost.org/badge/state/scovie)
+![维护状态](https://apps.yunohost.org/badge/maintained/scovie)
 
 [![使用 YunoHost 安装 Scovie](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=scovie)
 

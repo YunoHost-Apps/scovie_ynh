@@ -5,7 +5,9 @@ No se debe editar a mano.
 
 # Scovie para Yunohost
 
-[![Nivel de integración](https://dash.yunohost.org/integration/scovie.svg)](https://ci-apps.yunohost.org/ci/apps/scovie/) ![Estado funcional](https://ci-apps.yunohost.org/ci/badges/scovie.status.svg) ![Estado En Mantención](https://ci-apps.yunohost.org/ci/badges/scovie.maintain.svg)
+[![Nivel de integración](https://apps.yunohost.org/badge/integration/scovie)](https://ci-apps.yunohost.org/ci/apps/scovie/)
+![Estado funcional](https://apps.yunohost.org/badge/state/scovie)
+![Estado En Mantención](https://apps.yunohost.org/badge/maintained/scovie)
 
 [![Instalar Scovie con Yunhost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=scovie)
 
@@ -41,7 +43,7 @@ It provides an easy-to-use interface for administrators to upload and manage mul
 
 ## Información para desarrolladores
 
-Por favor enviar sus correcciones a la [`branch testing`](https://github.com/YunoHost-Apps/scovie_ynh/tree/testing
+Por favor enviar sus correcciones a la [rama `testing`](https://github.com/YunoHost-Apps/scovie_ynh/tree/testing).
 
 Para probar la rama `testing`, sigue asÍ:
 
