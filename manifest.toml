@@ -20,8 +20,10 @@ demo = "https://scovie.eclipse-technology.eu"
 yunohost = ">=11.2.12"
 architectures = "all"
 multi_instance = true
+
 ldap = true
 sso = true
+
 disk = "150M"
 ram.build = "500M"
 ram.runtime = "300M"
