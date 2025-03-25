@@ -27,7 +27,7 @@ It provides an easy-to-use interface for administrators to upload and manage mul
 * PyPi package: <https://pypi.org/project/scovie/>
 
 
-**Dostarczona wersja:** 0.0.6~ynh3
+**Dostarczona wersja:** 0.0.6~ynh4
 
 **Demo:** <https://scovie.eclipse-technology.eu>
 
