@@ -3,7 +3,7 @@ Este archivo README esta generado automaticamente<https://github.com/YunoHost/ap
 No se debe editar a mano.
 -->
 
-# Scovie para Yunohost
+# Scovie para YunoHost
 
 [![Nivel de integración](https://apps.yunohost.org/badge/integration/scovie)](https://ci-apps.yunohost.org/ci/apps/scovie/)
 ![Estado funcional](https://apps.yunohost.org/badge/state/scovie)
@@ -27,7 +27,7 @@ It provides an easy-to-use interface for administrators to upload and manage mul
 * PyPi package: <https://pypi.org/project/scovie/>
 
 
-**Versión actual:** 0.0.6~ynh3
+**Versión actual:** 0.0.6~ynh4
 
 **Demo:** <https://scovie.eclipse-technology.eu>
 

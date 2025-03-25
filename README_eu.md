@@ -27,7 +27,7 @@ It provides an easy-to-use interface for administrators to upload and manage mul
 * PyPi package: <https://pypi.org/project/scovie/>
 
 
-**Paketatutako bertsioa:** 0.0.6~ynh3
+**Paketatutako bertsioa:** 0.0.6~ynh4
 
 **Demoa:** <https://scovie.eclipse-technology.eu>
 
@@ -45,7 +45,7 @@ It provides an easy-to-use interface for administrators to upload and manage mul
 
 Bidali `pull request`a [`testing` abarrera](https://github.com/YunoHost-Apps/scovie_ynh/tree/testing).
 
-`testing` abarra probatzeko, ondorengoa egin:
+`testing` abarra probatzeko, honakoa egin:
 
 ```bash
 sudo yunohost app install https://github.com/YunoHost-Apps/scovie_ynh/tree/testing --debug

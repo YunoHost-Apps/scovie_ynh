@@ -7,7 +7,7 @@ name = "Scovie"
 description.en = "Digital signage system for high schools"
 description.fr = "Affichage dynamique open-source pour les lycées"
 
-version = "0.0.6~ynh3"
+version = "0.0.6~ynh4"
 
 maintainers = ["André Théo LAURET"]
 
@@ -36,14 +36,14 @@ ram.runtime = "300M"
     type = "path"
     default = "/scovie"
 
-    [install.admin]
-    type = "user"
-
     [install.init_main_permission]
     help.en = "Any YunoHost user and anonymous people from the web will be able to access the application"
     help.fr = "Tout utilisateur YunoHost et les personnes anonymes pourront accéder à l'application"
     type = "group"
     default = "visitors"
+
+    [install.admin]
+    type = "user"
 
 [resources]
     [resources.system_user]
