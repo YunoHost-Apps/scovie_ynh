@@ -5,7 +5,9 @@ NON debe editarse manualmente.
 
 # Scovie para YunoHost
 
-[![Nivel de integración](https://dash.yunohost.org/integration/scovie.svg)](https://ci-apps.yunohost.org/ci/apps/scovie/) ![Estado de funcionamento](https://ci-apps.yunohost.org/ci/badges/scovie.status.svg) ![Estado de mantemento](https://ci-apps.yunohost.org/ci/badges/scovie.maintain.svg)
+[![Nivel de integración](https://apps.yunohost.org/badge/integration/scovie)](https://ci-apps.yunohost.org/ci/apps/scovie/)
+![Estado de funcionamento](https://apps.yunohost.org/badge/state/scovie)
+![Estado de mantemento](https://apps.yunohost.org/badge/maintained/scovie)
 
 [![Instalar Scovie con YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=scovie)
 
@@ -25,7 +27,7 @@ It provides an easy-to-use interface for administrators to upload and manage mul
 * PyPi package: <https://pypi.org/project/scovie/>
 
 
-**Versión proporcionada:** 0.0.6~ynh3
+**Versión proporcionada:** 0.0.6~ynh4
 
 **Demo:** <https://scovie.eclipse-technology.eu>
 

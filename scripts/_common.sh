@@ -20,11 +20,8 @@ admin_email="${admin}@${domain}"
 # 'default_from_email' -> '__DEFAULT_FROM_EMAIL__' -> settings.DEFAULT_FROM_EMAIL
 default_from_email="${app}@${domain}"
 
-
-#REMOVEME? install_dir=/opt/yunohost/$app
 log_path=/var/log/$app
 log_file="${log_path}/${app}.log"
-
 
 #=================================================
 # PERSONAL HELPERS
