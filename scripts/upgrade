@@ -12,29 +12,10 @@ source /usr/share/yunohost/helpers
 #=================================================
 ynh_script_progression "Ensuring downward compatibility..."
 
-# FIXMEhelpers2.1: maybe replace with: ynh_app_setting_set_default --key=debug_enabled --value="0"
-if [ -z "${debug_enabled:-}" ]; then
-    debug_enabled="0"
-    ynh_app_setting_set --key=debug_enabled --value="$debug_enabled"
-fi
-
-# FIXMEhelpers2.1: maybe replace with: ynh_app_setting_set_default --key=log_level --value="WARNING"
-if [ -z "${log_level:-}" ]; then
-    log_level="WARNING"
-    ynh_app_setting_set --key=log_level --value="$log_level"
-fi
-
-# FIXMEhelpers2.1: maybe replace with: ynh_app_setting_set_default --key=admin_email --value="${admin}@${domain}"
-if [ -z "${admin_email:-}" ]; then
-    admin_email="${admin}@${domain}"
-    ynh_app_setting_set --key=admin_email --value="$admin_email"
-fi
-
-# FIXMEhelpers2.1: maybe replace with: ynh_app_setting_set_default --key=default_from_email --value="${app}@${domain}"
-if [ -z "${default_from_email:-}" ]; then
-    default_from_email="${app}@${domain}"
-    ynh_app_setting_set --key=default_from_email --value="$default_from_email"
-fi
+ynh_app_setting_set_default --key=debug_enabled --value="0"
+ynh_app_setting_set_default --key=log_level --value="WARNING"
+ynh_app_setting_set_default --key=admin_email --value="${admin}@${domain}"
+ynh_app_setting_set_default --key=default_from_email --value="${app}@${domain}"
 
 #=================================================
 # STOP SYSTEMD SERVICE
@@ -53,8 +34,9 @@ ynh_safe_rm "$install_dir/venv"
 
 _install_scovie_venv
 
-#REMOVEME? Assuming the install dir is setup using ynh_setup_source, the proper chmod/chowns are now already applied and it shouldn't be necessary to tweak perms | chmod o-rwx "$install_dir"
-#REMOVEME? Assuming the install dir is setup using ynh_setup_source, the proper chmod/chowns are now already applied and it shouldn't be necessary to tweak perms | chown -R "$app:www-data" "$install_dir"
+chmod o-rwx "$install_dir"
+chown -R "$app:www-data" "$install_dir"
+
 #=================================================
 # copy config files
 # ================================================
@@ -102,6 +84,7 @@ ynh_config_add_systemd
 yunohost service add "$app" --description="Digital signage system for high schools" --log="/var/log/$app/$app.log"
 
 ynh_config_add_logrotate
+
 chmod o-rwx "$log_path"
 chown -R "$app:" "$log_path"
 
