@@ -5,7 +5,9 @@ EZ editatu eskuz.
 
 # Scovie YunoHost-erako
 
-[![Integrazio maila](https://dash.yunohost.org/integration/scovie.svg)](https://ci-apps.yunohost.org/ci/apps/scovie/) ![Funtzionamendu egoera](https://ci-apps.yunohost.org/ci/badges/scovie.status.svg) ![Mantentze egoera](https://ci-apps.yunohost.org/ci/badges/scovie.maintain.svg)
+[![Integrazio maila](https://apps.yunohost.org/badge/integration/scovie)](https://ci-apps.yunohost.org/ci/apps/scovie/)
+![Funtzionamendu egoera](https://apps.yunohost.org/badge/state/scovie)
+![Mantentze egoera](https://apps.yunohost.org/badge/maintained/scovie)
 
 [![Instalatu Scovie YunoHost-ekin](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=scovie)
 
@@ -25,7 +27,7 @@ It provides an easy-to-use interface for administrators to upload and manage mul
 * PyPi package: <https://pypi.org/project/scovie/>
 
 
-**Paketatutako bertsioa:** 0.0.6~ynh3
+**Paketatutako bertsioa:** 0.0.6~ynh4
 
 **Demoa:** <https://scovie.eclipse-technology.eu>
 
@@ -43,7 +45,7 @@ It provides an easy-to-use interface for administrators to upload and manage mul
 
 Bidali `pull request`a [`testing` abarrera](https://github.com/YunoHost-Apps/scovie_ynh/tree/testing).
 
-`testing` abarra probatzeko, ondorengoa egin:
+`testing` abarra probatzeko, honakoa egin:
 
 ```bash
 sudo yunohost app install https://github.com/YunoHost-Apps/scovie_ynh/tree/testing --debug
