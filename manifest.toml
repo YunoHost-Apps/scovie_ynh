@@ -5,7 +5,7 @@ packaging_format = 2
 id = "scovie"
 name = "Scovie"
 description.en = "Digital signage system for high schools"
-description.fr = "Affichage dynamique open-source pour les lycées"
+description.fr = "Système d'affichage dynamique pour les lycées"
 
 version = "0.0.6~ynh4"
 
