@@ -11,12 +11,16 @@ It shall NOT be edited by hand.
 Digital signage system for high schools
 
 [![App Demo](https://img.shields.io/badge/App_Demo-blue?style=for-the-badge)](https://scovie.eclipse-technology.eu)
-[![Version: 0.0.6~ynh4](https://img.shields.io/badge/Version-0.0.6~ynh4-rgba(0,150,0,1)?style=for-the-badge)](https://ci-apps.yunohost.org/ci/apps/scovie/)
+[![Version: 0.0.6~ynh4](https://img.shields.io/badge/Version-0.0.6~ynh4-rgb(18,138,11)?style=for-the-badge)](https://ci-apps.yunohost.org/ci/apps/scovie/)
 
 <div align="center">
 <a href="https://apps.yunohost.org/app/scovie"><img height="100px" src="https://github.com/YunoHost/yunohost-artwork/raw/refs/heads/main/badges/neopossum-badges/badge_more_info_on_the_appstore.svg"/></a>
 <a href="https://github.com/YunoHost-Apps/scovie_ynh/issues"><img height="100px" src="https://github.com/YunoHost/yunohost-artwork/raw/refs/heads/main/badges/neopossum-badges/badge_report_an_issue.svg"/></a>
 </div>
+
+
+## Screenshots
+![Screenshot of Scovie](./doc/screenshots/all.png)
 
 ## 📦 Developer info
 
