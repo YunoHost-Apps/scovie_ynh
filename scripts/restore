@@ -39,6 +39,8 @@ systemctl enable "$app.service" --quiet
 
 yunohost service add "$app" --description="Digital signage system for high schools" --log="/var/log/$app/$app.log"
 
+mkdir -p "/var/log/$app"
+chmod 640 "/var/log/$app"
 touch /var/log/$app/$app.log
 chown -R "$app:" "/var/log/$app"
 
