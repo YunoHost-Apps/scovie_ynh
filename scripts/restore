@@ -42,6 +42,8 @@ yunohost service add "$app" --description="Digital signage system for high schoo
 ynh_restore "/etc/logrotate.d/$app"
 
 ynh_restore "/var/log/$app/"
+chmod o-rwx "/var/log/$app"
+chown -R "$app:" "/var/log/$app"
 
 chmod o-rwx "/var/log/$app"
 chown -R "$app:" "/var/log/$app"
