@@ -83,7 +83,7 @@ ynh_config_add_systemd
 
 yunohost service add "$app" --description="Digital signage system for high schools" --log="/var/log/$app/$app.log"
 
-ynh_config_add_logrotate
+ynh_config_add_logrotate "/var/log/$app/$app.log"
 
 chmod o-rwx "$log_path"
 chown -R "$app:" "$log_path"
