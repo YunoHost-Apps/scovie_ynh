@@ -23,9 +23,9 @@ ynh_psql_db_shell < ./db.sql
 #=================================================
 # PYTHON VIRTUALENV
 #=================================================
-ynh_script_progression "Update Python virtualenv..."
+#ynh_script_progression "Update Python virtualenv..."
 
-python3 -m venv --upgrade --without-pip "$install_dir/venv"
+#python3 -m venv --upgrade --without-pip "$install_dir/venv"
 
 #=================================================
 # RESTORE SYSTEM CONFIGURATIONS
@@ -39,9 +39,14 @@ systemctl enable "$app.service" --quiet
 
 yunohost service add "$app" --description="Digital signage system for high schools" --log="/var/log/$app/$app.log"
 
+ynh_restore "/etc/logrotate.d/$app"
+
+#=================================================
+# RESTORE VARIOUS FILES
+#=================================================
+
 mkdir -p "/var/log/$app"
 chown -R $app:$app "/var/log/$app"
-ynh_restore "/etc/logrotate.d/$app"
 ynh_restore "/var/log/$app/"
 
 #=================================================
