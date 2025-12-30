@@ -10,7 +10,6 @@ It shall NOT be edited by hand.
 
 Digital signage system for high schools
 
-[![App Demo](https://img.shields.io/badge/App_Demo-blue?style=for-the-badge)](https://scovie.eclipse-technology.eu)
 [![Version: 0.0.6~ynh4](https://img.shields.io/badge/Version-0.0.6~ynh4-rgb(18,138,11)?style=for-the-badge)](https://ci-apps.yunohost.org/ci/apps/scovie/)
 
 <div align="center">
