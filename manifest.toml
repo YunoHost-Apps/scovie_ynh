@@ -14,7 +14,6 @@ maintainers = ["André Théo LAURET"]
 [upstream]
 license = "GPL-3.0"
 code = "https://github.com/eldertek/scovie"
-demo = "https://scovie.eclipse-technology.eu"
 
 [integration]
 yunohost = ">=12.1.17"
