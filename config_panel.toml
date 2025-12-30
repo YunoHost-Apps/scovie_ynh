@@ -31,8 +31,8 @@ services = ["__APP__"]
         bind = "debug_enabled:__INSTALL_DIR__/settings.py"
 
         [main.config.log_level]
-        type = "string"
         ask = "Log Level"
+        type = "select"
         choices = ["DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"]
         default = "WARNING"
         bind = "log_level:__INSTALL_DIR__/settings.py"

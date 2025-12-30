@@ -5,7 +5,7 @@ packaging_format = 2
 id = "scovie"
 name = "Scovie"
 description.en = "Digital signage system for high schools"
-description.fr = "Affichage dynamique open-source pour les lycées"
+description.fr = "Système d'affichage dynamique pour les lycées"
 
 version = "0.0.6~ynh4"
 
@@ -14,15 +14,15 @@ maintainers = ["André Théo LAURET"]
 [upstream]
 license = "GPL-3.0"
 code = "https://github.com/eldertek/scovie"
-demo = "https://scovie.eclipse-technology.eu"
 
 [integration]
-yunohost = ">=11.2.12"
+yunohost = ">=12.1.17"
+helpers_version = "2.1"
 architectures = "all"
 multi_instance = true
 
-ldap = true
-sso = true
+ldap = false
+sso = false
 
 disk = "150M"
 ram.build = "500M"
@@ -49,6 +49,7 @@ ram.runtime = "300M"
     [resources.system_user]
 
     [resources.install_dir]
+    group = "www-data:r-x"
 
     [resources.permissions]
     main.url = "/"
